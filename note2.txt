@@ -1,0 +1,64 @@
+Aqui estão os principais pontos da aula:
+
+O que é um endpoint? Um endpoint é um ponto de acesso na sua API que permite que outros sistemas (como aplicativos web ou outros serviços) se conectem e interajam com sua aplicação.
+
+Instalando o FastAPI: Você aprendeu a instalar o FastAPI e o uvicorn (um servidor web para rodar o FastAPI) usando o comando pip.
+
+Criando um endpoint simples: Você aprendeu a criar um endpoint básico que retorna a mensagem "Hello World" usando o decorador @app.get().
+
+Rodando o servidor: Você aprendeu a usar o comando uvicorn para iniciar o servidor FastAPI e acessar o endpoint no navegador.
+
+----------------------------- PARTE 2. ---------------------------------------
+ANTES DE TUDO INICIALIAZAAR O VENV.
+criar um main.py
+
+INSTALAR : pip install fastapi
+           pip install uvicorn
+
+
+1- importantos a biblioteca. 
+from fastapi import FastAPI
+
+2- fazemos uma variavel q receba o objto FastAPI         // como se fosse uma classe. 
+app = FastAPI()
+
+3- demos um destino ("ROTA") para ele para o servidor local. 
+@app.get('/api/hello')
+
+4- retornamos o hello word se ele quiser puxar por este endereço. 
+def hello_world():
+    return {'Hello':'World'}
+
+5- iniciamos o servidor uvicorn.
+uvicorn main:app --reload
+
+--
+criamos uma rota para restaurante / Importamos o Query do fastAPI.
+@app.get('/api/restaurante/')
+
+Fazemos uma função e utilizamos Query qé usado para declarar parâmetros de consulta na URL
+def get_restaurantes(restaurante: str = Query(None)):
+
+logo em seguida pegamos o codigo do app.py e melhoramos ele 
+url = 'https://guilhermeonrails.github.io/api-restaurantes/restaurantes.json'
+    response = requests.get(url)
+    if response.status_code == 200:
+        dados_json = response.json()
+criamos uma condição pro restaurante for Nada ele nos retorna tudo
+        if restaurante is None:
+            return {'Dados': dados_json}
+
+mudamos o dicionario para lista \/ 
+        dados_restaurante = []
+        for item in dados_json:
+
+criamos uma condição para verificar se o nome do restaurante esta em restaurante
+            if item['Company'] == restaurante:
+                dados_restaurante.append({
+                    "item" : item['Item'],
+                    "price": item['price'],
+                    "description" : item['description']
+                })
+        return {'Restaurante':restaurante, 'Cardapio':dados_restaurante}
+    else:
+        print(f'O erro foi {response.status_code} - {response.text}')

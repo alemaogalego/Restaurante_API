@@ -1,0 +1,64 @@
+Criando VENV                                 | desativando venv
+python -m venv nome_da_venv                  |     deactivate
+    
+1: ativamos o Ambiente Virtual Venv
+venv\Scripts\activate.bat
+
+2: importamos a biblioteca: 
+import requests
+
+3: Pegamos uma Url = e colocamos o link dentro da variavel Url
+
+4: fazemos umas responses.requests.get(url)          para solicitarmos/pegar os dados da url. 
+
+5: fazemos uma verificação para ver se os dados vem completo : 200 > certo            404> nao funcionou.
+
+6: criamos uma condição para checar se veio com valor 200
+if response.status_code == 200:
+    dados_json = response.json()
+
+dps criamos uma variavel dados_json = q recebe response.json. 
+
+7: criamos um dicionario vazio. 
+    dados_restaurante = {}
+
+8: criamos um for para pegar apenas os nomes do restaurante nos dados_json e armazenar na variavel. 
+for item in dados_json:
+    nome_do_restaurante = item['Company']
+
+9: fazemos uma verificação para ver se o nome do restaurante esta em dados_restaurante. Para depois puxar as info de um restaurante especifico. 
+if nome_do_restaurante not in dados_restaurante:
+
+10:Dps pegamos o dados_restaurante e passamos nele os nome_do_restaurante que recebe o (item['Company'] nome dos restaurante) e assim criar uma lista vazia para cada restaurante.
+dados_restaurante[nome_do_restaurante] = []
+
+11:Caso ja tenha ele vai criar na lista de cada restaurante um dicionario importando. os item,preço e descrição do produto de um restaurante. 
+        dados_restaurante[nome_do_restaurante].append({
+            "item" : item['Item'],
+            "price": item['price'],
+            "description" : item['description']
+        })
+
+12: Printamos todo os item,preço e descrição do = McDonald’s . Obs: tem q ser igual McDonald’s no cod e no arquivo Json.
+print(dados_restaurante["McDonald’s"])
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+13: Criando um arquivo para cada restaurante. 
+Vamos Criar um arquivo json para cada restaurante pegando seus produtos, precos e descrição. 
+Primeiros importamos o json.
+
+import json
+
+Segundo fazemos um for nome_do_restaurante,dados em dados_restaurante.items()  
+
+for nome_do_restaurante, dados in dados_restaurante.items():                | Essa linha de código é usada para iterar sobre os itens de um dicionário > dados_restaurante = {} 
+                                                                            | onde nome_do_restaurante é a chave e dados é o valor. de =  dados_restaurante = {} 
+
+    nome_do_arquivo = f'{nome_do_restaurante}.json'                         | Aqui estamos criando um arq com os nomes dos restaurantes em json. 
+
+    with open(nome_do_arquivo, 'w') as arq_restaurante:                     | with open()= usamos para manipular o arquivo. O primeiro argumento é o nome do arquivo
+                                                                            | e o segundo argumento especifica o modo em que o arquivo será aberto.
+                                                                            | 'w': Este é o modo de abertura do arquivo. 'w' significa "write". Se o arquivo já existe, ele será sobrescrito; 
+                                                                            | se não existe, será criado.
+
+        json.dump(dados, arq_restaurante, indent=4)                         | Aqui transformamos em json pegando os (DADOS)que pretentemos salvar no arquivo que nomeamos assima no as. 
+                                                                            | with open(nome_do_arquivo, 'w') as arq_restaurante:      e dando uma identação de 4. 

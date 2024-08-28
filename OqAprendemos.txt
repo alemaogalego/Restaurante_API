@@ -1,0 +1,35 @@
+Exploramos o conceito fundamental de ambientes virtualizados no desenvolvimento de software, compreendendo sua importância para isolar e gerenciar dependências de projetos.
+
+Aprendemos a criar e ativar um ambiente virtual em nossa máquina utilizando a ferramenta venv, uma prática essencial para garantir a consistência do ambiente de desenvolvimento.
+
+Demonstramos os usos mais comuns de ambientes virtuais e destacamos a capacidade de isolar bibliotecas e pacotes específicos para cada projeto, evitando conflitos entre diferentes versões.
+
+Exploramos a criação e utilização de arquivos requirements.txt para documentar e compartilhar as dependências do projeto. Este arquivo se tornou uma ferramenta valiosa para reproduzir ambientes de desenvolvimento em diferentes máquinas, garantindo uniformidade no processo de implementação.
+
+Reforçamos a importância da virtualização no desenvolvimento diário, lembrando que a criação e ativação de ambientes virtuais são passos fundamentais antes de iniciar qualquer atividade de codificação.
+
+Essa prática contribui para ambientes mais estáveis, colaborativos e consistentes em projetos Python.
+
+                                                                 --PARTE 2-- 
+
+Exploramos o conceito de API (Interface de Programação de Aplicações) e compreendemos seu funcionamento como uma ponte entre diferentes sistemas, permitindo a comunicação e o compartilhamento de dados.
+
+Utilizamos o módulo requests em Python para realizar requisições a APIs, aprendendo como obter dados de serviços externos e integrá-los em nossos programas.
+
+Praticamos o processo de fazer requisições a uma API de restaurantes, utilizando o módulo requests para receber informações sobre cada estabelecimento em formato JSON.
+
+Aprendemos a salvar os dados recebidos da API em arquivos JSON, permitindo-nos armazenar localmente as informações dos restaurantes para uso futuro.
+
+Demonstramos como criar nossos próprios arquivos JSON, proporcionando uma compreensão prática de como estruturar e organizar dados em um formato legível e interoperável.
+
+Como vimos, as APIs desempenham um papel fundamental na interconexão de sistemas e no compartilhamento de dados entre diferentes aplicações, fazendo uma conexão entre usuário e servidor.
+
+------------------ PARTE 3 -- 
+
+Instalamos a biblioteca FastAPI e configuramos um ambiente para criar uma API utilizando Python;
+
+Criamos um endpoint utilizando o FastAPI para disponibilizar recursos relacionados aos restaurantes, permitindo que usuários acessem informações específicas sobre esses estabelecimentos;
+
+Adicionamos um endpoint que pode receber um parâmetro de consulta (query parameter) para filtrar restaurantes com base em seus nomes, proporcionando uma maneira flexível de buscar informações específicas;
+
+Utilizamos as ferramentas de documentação docs e redoc do FastAPI para gerar automaticamente documentação interativa para a API, facilitando a compreensão dos endpoints disponíveis e permitindo testes diretos na interface de documentação.

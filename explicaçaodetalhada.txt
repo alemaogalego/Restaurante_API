@@ -1,0 +1,29 @@
+Importação do Query:
+Começamos importando o Query do FastAPI, que é usado para declarar parâmetros de consulta na URL.
+
+Rota para Restaurantes:
+Criamos uma rota GET para /api/restaurante/ onde vamos buscar dados de restaurantes.
+Função get_restaurantes:
+
+A função recebe o nome do restaurante como parâmetro opcional através do Query. Se nenhum restaurante for especificado (restaurante for None), a função retorna todos os dados.
+Recuperação dos Dados:
+
+Utilizamos a biblioteca requests para buscar dados JSON de um URL remoto. Se a requisição for bem-sucedida (status_code == 200), os dados JSON são carregados.
+Filtragem de Resultados:
+
+Se um nome de restaurante for fornecido, filtramos os dados JSON para encontrar apenas os itens que correspondem ao nome do restaurante.
+
+Se o restaurante for encontrado, a função retorna um dicionário com o nome do restaurante e seu cardápio filtrado. Caso contrário, retorna todos os dados.
+
+Se a requisição para o URL falhar, retorna uma mensagem de erro com o status code e o texto da resposta.
+
+-- dps de tudo isso para visualizar na pag WEB. 
+http://127.0.0.1:8000/api/restaurante/                = lista todos os restaurante
+
+http://127.0.0.1:8000/api/restaurante/?restaurante=KFC                  = Lista todos restaurante KFC. 
+
+FORMA DE VER TODOS OS ENDPOINTS CRIADOS.
+
+http://127.0.0.1:8000/docs
+
+pelo docs da para testar tbm o codigo pela web, mostra tbm o endereço etc. mostra tbm oq documentamos na > '''    bla, bla, bla ''' < 

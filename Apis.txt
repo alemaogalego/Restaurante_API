@@ -1,0 +1,16 @@
+Flask: Simplicidade e Flexibilidade
+Flask é conhecido por sua simplicidade e facilidade de uso. É uma escolha popular para projetos menores ou para desenvolvedores que preferem ter mais controle sobre os componentes que utilizam. Com Flask, você pode rapidamente criar uma API básica com poucas linhas de código, sendo uma excelente opção para prototipagem rápida, como mostrado no código a seguir:
+
+---------------------------------------------
+
+Django: Estrutura Poderosa e Convenções Batteries-Included
+O Django é uma escolha robusta para projetos mais complexos e de maior escala. Ele fornece uma estrutura completa que inclui um sistema de administração, ORM (Object-Relational Mapping) e muitos outros recursos. Apesar de ser um framework mais pesado em comparação com Flask, o Django oferece uma solução abrangente para desenvolvimento web. Um exemplo de como criar uma API simples em Django está no código a seguir:
+
+---------------------------------------------
+
+FastAPI: Alta Performance e Documentação Automática
+Como vimos, FastAPI é uma escolha moderna, otimizada para alta performance e fácil utilização. Ele utiliza a tipagem de dados do Python 3.7+ para oferecer uma documentação automática excepcional, facilitando a compreensão e utilização da API.
+
+---------------------------------------------
+
+Lembre-se: é importante verificar o status code, processar os dados, e retornar informações específicas com base nos parâmetros fornecidos com a versatilidade do FastAPI o torna uma escolha sólida para uma variedade de casos de uso, proporcionando alta performance e uma experiência de desenvolvimento agradável com Python.
