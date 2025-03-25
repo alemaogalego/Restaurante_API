@@ -113,7 +113,13 @@ Nessa interface, é possível testar os endpoints diretamente.
 - Exploramos as ferramentas de documentação automática (`docs` e `redoc`).
 
 ---
-
+## Informaçoes Adicionais
+Ler os arquivos: 
+- OqAprendemos.txt
+- explicaçaodetalhada.txt
+- note.txt
+- note2.txt
+  
 ## Conclusão
 Este projeto demonstrou como criar uma API utilizando FastAPI, manipular JSON e estruturar um ambiente virtualizado para desenvolvimento em Python. Essas práticas são essenciais para criar sistemas robustos e bem documentados.
 
