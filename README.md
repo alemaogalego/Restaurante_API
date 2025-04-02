@@ -1,6 +1,7 @@
 # API de Restaurantes com FastAPI
 
 ## Introdução
+
 Este projeto tem como objetivo criar uma API que retorna informações sobre restaurantes e seus cardápios utilizando FastAPI. Também exploramos conceitos de ambientes virtualizados e manipulação de dados JSON com Python.
 Explorei POO com herança, métodos especiais e uso de super() Para herdar da classe mae/pai. Desenvolvi um sistema de cardápio usando classes e métodos abstratos, aplicando descontos. Aprendi a criar e gerenciar ambientes virtuais com venv e criei APIs com FastAPI, desenvolvendo rotas, documentação automática e requisições HTTP.
 ---
